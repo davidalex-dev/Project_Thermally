@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Thermally</string>
+    <string name="app_ver">v1.0.0</string>
+
+    <string name="button_conv">Temperature Converter</string>
+    <string name="button_info">Temperature Information</string>
+    <string name="button_about">About Thermally</string>
+    <string name="button_exit">Exit</string>
+
+    <string name="about_1">Thermally is a code based temperature converter with extra features that will be useful upon making rooms.</string>
+    <string name="about_2">This application was developed by David Alexander and Timothyus Kevin Dewanto.</string>
+    <string name="about_3">If you find any bugs, you can report them to:</string>
+    <string name="about_4">or</string>
+    <string name="about_5">© Thermally 2021, all rights reserved.</string>
+
+    <string name="email_1">tdewanto@student.ciputra.ac.id</string>
+    <string name="email_2">dalexander03@student.ciputra.ac.id</string>
+</resources>
