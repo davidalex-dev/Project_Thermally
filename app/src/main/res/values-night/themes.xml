@@ -2,12 +2,29 @@
 
     <style name="Theme.Project_Thermally" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/white</item>
-        <item name="colorSecondary">#c0c0c0</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">#C4C4C4</item>
+        <item name="android:background">#C4C4C4</item>
     </style>
 
     <style name="SplashBG" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background">#3a3a3a</item>
+        <item name="android:background">#4E4B4B</item>
         <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="Red" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF0000</item>
+        <item name="colorSecondary">#4E4B4B</item>
+    </style>
+
+    <style name="Orange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF5722</item>
+        <item name="colorSecondary">#4E4B4B</item>
+    </style>
+
+    <style name="Blue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0066FF</item>
+        <item name="colorSecondary">#4E4B4B</item>
     </style>
 
 </resources>

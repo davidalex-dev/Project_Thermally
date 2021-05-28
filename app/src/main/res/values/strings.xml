@@ -7,6 +7,22 @@
     <string name="button_about">About Thermally</string>
     <string name="button_exit">Exit</string>
 
+    <string name="convert_from">Convert From</string>
+    <string name="convert_to">Convert To</string>
+    <string name="convert_category">Convert Category</string>
+    <string name="convert_1">1</string>
+    <string name="convert_2">2</string>
+    <string name="convert_3">3</string>
+    <string name="convert_4">4</string>
+    <string name="convert_5">5</string>
+    <string name="convert_6">6</string>
+    <string name="convert_7">7</string>
+    <string name="convert_8">8</string>
+    <string name="convert_9">9</string>
+    <string name="convert_0">0</string>
+    <string name="convert_clear">C</string>
+    <string name="convert_equal">=</string>
+
     <string name="about_1">Thermally is a code based temperature converter with extra features that will be useful upon making rooms.</string>
     <string name="about_2">This application was developed by David Alexander and Timothyus Kevin Dewanto.</string>
     <string name="about_3">If you find any bugs, you can report them to:</string>
@@ -15,4 +31,23 @@
 
     <string name="email_1">tdewanto@student.ciputra.ac.id</string>
     <string name="email_2">dalexander03@student.ciputra.ac.id</string>
+
+    <string name="temp_hot">Hot</string>
+    <string name="temp_warm">Warm</string>
+    <string name="temp_cold">Cold</string>
+
+    <string name="hot_info1">More than 23.5°C (>74°F)</string>
+    <string name="hot_info2">This temperature is perfect for greenhouses, Sauna, Draining Room, Warehouse, Solar Panel Room, Heat Convertion Room and Arrays.</string>
+    <string name="hot_info3">High temperatures may caused by rising environment temperatures, engine’s work, solar panel usages, glass dome usages or steam that caused by bioreaction (such as sun, fertilizers usage or cooking).</string>
+    <string name="hot_info4">High Temperatures can be used to raise up generator’s power or solar panel and best for bio reaction garden, so it is adviced to place this type of room in the top floor or outside of house.</string>
+
+    <string name="warm_info1">About 20-23.5°C (68-74°F)</string>
+    <string name="warm_info2">This temperature is perfect for Baby Room or Children Room, Living Room, Dining Room, Bedroom and Bathroom.</string>
+    <string name="warm_info3">Medium temperatures may caused by changing environment temperatures, sun level, electronical devices or low-level of steam resources. Also, if your room has less ventilation, the warm temperature may risen to high temperature.</string>
+    <string name="warm_info4">Medium temperatured room is adviseable to use for family’s room, or meditation room. The stable temperature made a best suit for relaxing or mind-cooling.</string>
+
+    <string name="cold_info1">Less than 20 °C (68 °F) or about 14°C-18 °C (57.2 °F- 64.4°F)</string>
+    <string name="cold_info2">This temperature is perfect for bedroom, underground rooms, bunker or food storages.</string>
+    <string name="cold_info3">Low temperatures may caused by dropping environment temperature or even winter’ disaster, in other case, low temperatures can also caused by extended usage of cooling machine or fast decreasing pressure points.</string>
+    <string name="cold_info4">Low Temperatures can be used to keep food for a long usage or planting fungus in underground. It can also used as relaxing bedroom due to it’s cold behaviour that made someone much relaxed in their bed.</string>
 </resources>
