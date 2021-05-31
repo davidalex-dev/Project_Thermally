@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Thermally">
-
+        <activity android:name=".ColdActivity"></activity>
+        <activity android:name=".WarmActivity" />
+        <activity android:name=".HotActivity" />
+        <activity android:name=".ConvertInfoActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"></activity>
-        
-        <activity android:name=".ConvertActivity"></activity>
-        <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".AboutActivity"></activity>
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ConvertActivity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

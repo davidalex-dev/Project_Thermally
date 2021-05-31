@@ -22,6 +22,8 @@
     <string name="convert_0">0</string>
     <string name="convert_clear">C</string>
     <string name="convert_equal">=</string>
+    <string name="convert_info">Info</string>
+    <string name="convert_enter">Enter a temperature number</string>
 
     <string name="about_1">Thermally is a code based temperature converter with extra features that will be useful upon making rooms.</string>
     <string name="about_2">This application was developed by David Alexander and Timothyus Kevin Dewanto.</string>

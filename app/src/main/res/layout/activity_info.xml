@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorSecondary">
+    android:background="?android:attr/colorBackground"
+    android:theme="@style/SplashBG">
 
     <TextView
         android:id="@+id/info_title"
@@ -20,48 +21,146 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_hot"
-        android:layout_width="125dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_hot"
+        android:layout_width="120dp"
         android:layout_height="500dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="81dp"
-        android:text="@string/temp_hot"
-        android:theme="@style/Red"
-        app:icon="@drawable/temperature_burn"
-        app:iconGravity="textTop"
-        app:iconSize="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_warm"
+        app:layout_constraintEnd_toStartOf="@+id/cardView_warm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button_warm"
-        android:layout_width="125dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="110dp"
+                android:layout_height="292dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temperature_burn" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="35dp"
+                android:background="@android:color/transparent"
+                android:text="@string/temp_hot"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_warm"
+        android:layout_width="120dp"
         android:layout_height="500dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="81dp"
-        android:text="@string/temp_warm"
-        android:textColor="?attr/colorOnPrimary"
-        android:theme="@style/Orange"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_cold"
-        app:layout_constraintStart_toEndOf="@+id/button_hot"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/cardView_cold"
+        app:layout_constraintStart_toEndOf="@+id/cardView_hot"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button_cold"
-        android:layout_width="125dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="110dp"
+                android:layout_height="292dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temperature_warm" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="35dp"
+                android:background="@android:color/transparent"
+                android:text="@string/temp_warm"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_cold"
+        android:layout_width="120dp"
         android:layout_height="500dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="81dp"
-        android:text="@string/temp_cold"
-        android:textColor="?attr/colorOnPrimary"
-        android:theme="@style/Blue"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_warm"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/cardView_warm"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="110dp"
+                android:layout_height="292dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temperature_cold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="35dp"
+                android:background="@android:color/transparent"
+                android:text="@string/temp_cold"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
