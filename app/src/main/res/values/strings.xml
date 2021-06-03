@@ -21,9 +21,22 @@
     <string name="convert_9">9</string>
     <string name="convert_0">0</string>
     <string name="convert_clear">C</string>
-    <string name="convert_equal">=</string>
+    <string name="convert_dot">.</string>
     <string name="convert_info">Info</string>
     <string name="convert_enter">Enter a temperature number</string>
+    <string name="convert_history">History</string>
+
+    <string name="option_convert">Convert Options</string>
+    <string name="option_rc">R -> C</string>
+    <string name="option_rf">R -> F</string>
+    <string name="option_cr">C -> R</string>
+    <string name="option_cf">C -> F</string>
+    <string name="option_fr">F -> R</string>
+    <string name="option_fc">F -> C</string>
+    <string name="option_info">For your information...</string>
+    <string name="option_reamur">R = Reamur</string>
+    <string name="option_celcius">C = Celcius</string>
+    <string name="option_fahrenheit">F = Fahrenheit</string>
 
     <string name="about_1">Thermally is a code based temperature converter with extra features that will be useful upon making rooms.</string>
     <string name="about_2">This application was developed by David Alexander and Timothyus Kevin Dewanto.</string>

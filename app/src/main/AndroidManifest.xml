@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Thermally">
-        <activity android:name=".ColdActivity"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".ColdActivity" />
         <activity android:name=".WarmActivity" />
         <activity android:name=".HotActivity" />
         <activity android:name=".ConvertInfoActivity" />

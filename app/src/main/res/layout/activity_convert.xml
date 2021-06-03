@@ -108,7 +108,7 @@
         android:layout_marginBottom="20dp"
         android:text="@string/convert_9"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_equal"
+        app:layout_constraintBottom_toTopOf="@+id/button_dot"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
@@ -120,19 +120,19 @@
         android:layout_marginBottom="15dp"
         android:text="@string/convert_0"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_category"
-        app:layout_constraintEnd_toStartOf="@+id/button_equal"
+        app:layout_constraintBottom_toTopOf="@+id/button_history"
+        app:layout_constraintEnd_toStartOf="@+id/button_dot"
         app:layout_constraintStart_toEndOf="@+id/button_clear" />
 
     <Button
-        android:id="@+id/button_category"
+        android:id="@+id/button_history"
         android:layout_width="378dp"
         android:layout_height="96dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="615dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/convert_category"
+        android:text="@string/convert_history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -146,70 +146,93 @@
         android:layout_marginBottom="15dp"
         android:text="@string/convert_clear"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_category"
+        app:layout_constraintBottom_toTopOf="@+id/button_history"
         app:layout_constraintEnd_toStartOf="@+id/button_0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_equal"
+        android:id="@+id/button_dot"
         android:layout_width="100dp"
         android:layout_height="90dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/convert_equal"
+        android:text="@string/convert_dot"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_category"
+        app:layout_constraintBottom_toTopOf="@+id/button_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_0" />
 
     <Button
         android:id="@+id/button_convert_from"
-        android:layout_width="175dp"
+        android:layout_width="185dp"
         android:layout_height="60dp"
         android:layout_marginStart="17dp"
+        android:layout_marginTop="9dp"
         android:layout_marginBottom="20dp"
         android:text="@string/convert_from"
         app:layout_constraintBottom_toTopOf="@+id/button_1"
         app:layout_constraintEnd_toStartOf="@+id/button_convert_to"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
     <Button
         android:id="@+id/button_convert_to"
-        android:layout_width="175dp"
+        android:layout_width="185dp"
         android:layout_height="60dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
         android:layout_marginBottom="20dp"
         android:text="@string/convert_to"
         app:layout_constraintBottom_toTopOf="@+id/button_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_convert_from" />
+        app:layout_constraintStart_toEndOf="@+id/button_convert_from"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
-    <Button
-        android:id="@+id/info_button"
-        android:layout_width="68dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/convert_info"
-        app:layout_constraintEnd_toEndOf="@+id/input_number"
-        app:layout_constraintTop_toTopOf="@+id/input_number" />
-
-    <EditText
-        android:id="@+id/input_number"
-        android:layout_width="377dp"
-        android:layout_height="66dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="17dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="none"
-        android:padding="10dp"
-        android:text="@string/convert_enter"
-        android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <EditText
+                android:id="@+id/text_Calc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:editable="false"
+                android:text="Enter a temperature number"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/info_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/info_button"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="13dp"
+                android:text="@string/convert_info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
