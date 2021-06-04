@@ -138,7 +138,7 @@ public class ConvertActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(converted!=true){
-                    text_Calc.setText(String.valueOf(Float.parseFloat(input)));
+                    input += ".";
                 }
             }
         });
