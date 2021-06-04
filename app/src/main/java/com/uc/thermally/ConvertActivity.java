@@ -306,6 +306,7 @@ public class ConvertActivity extends AppCompatActivity {
 
         Log.d(TAG, "textChange: " + textChange);
         text_Calc.setText(textChange);
+        text_Selected.setText("Converted temperature is: " + tempDouble + "°" + tempString);
 
     }
 
