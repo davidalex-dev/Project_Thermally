@@ -23,8 +23,9 @@
     <string name="convert_clear">C</string>
     <string name="convert_dot">.</string>
     <string name="convert_info">Info</string>
-    <string name="convert_enter">Enter a temperature number</string>
+    <string name="convert_enter">Enter a temperature number.</string>
     <string name="convert_history">History</string>
+    <string name="convert_notSet">Conversion type not yet selected.</string>
 
     <string name="option_convert">Convert Options</string>
     <string name="option_rc">R -> C</string>

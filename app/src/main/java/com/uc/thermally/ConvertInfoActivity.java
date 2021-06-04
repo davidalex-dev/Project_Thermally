@@ -6,14 +6,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class ConvertInfoActivity extends AppCompatActivity {
     private Button button_rc, button_rf, button_cr, button_cf, button_fr, button_fc;
     private ImageButton convert_info_back;
-    private String temp, temp2;
+
+    private static final String TAG = "ConvertInfoActivity"; //log.d
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,61 +34,75 @@ public class ConvertInfoActivity extends AppCompatActivity {
         button_rc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.putExtra("temp","RC");
-                setResult(200, intent);
-                finish();
-                //set convert type rc
-                //float rc
-                //finish();
+                Change("RC");
             }
         });
 
         button_rf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set convert type rf
-                //float rf
-                //finish();
+                Change("RF");
             }
         });
 
         button_cr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set convert type cr
-                //float cr
-                //finish();
+                Change("CR");
             }
         });
 
         button_cf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set convert type cf
-                //float cf
-                //finish();
+                Change("CF");
             }
         });
 
         button_fr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set convert type fr
-                //float fr
-                //finish();
+                Change("FR");
             }
         });
 
         button_fc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set convert type fc
-                //float fc
-                //finish();
+                Change("FC");
             }
         });
 
+    }
+
+    private void Change(String s){
+        String temp = s;
+        String temp2 = null;
+        ConvertActivity ca = new ConvertActivity();
+        ca.convertType = temp;
+
+        if(temp == "RC"){
+            temp2 = "Reamur -> Celcius";
+        }else if(temp == "RF"){
+            temp2 = "Reamur -> Fahrenheit";
+        }else if(temp == "CR"){
+            temp2 = "Celcius -> Reamur";
+        }else if(temp == "CF"){
+            temp2 = "Celcius -> Fahrenheit";
+        }else if(temp == "FR"){
+            temp2 = "Fahrenheit -> Reamur";
+        }else if(temp == "FC"){
+            temp2 = "Fahrenheit -> Celcius";
+        }
+
+        ca.tempConv = temp2;
+
+        Log.d(TAG, "temp is: " + temp);
+        Log.d(TAG, "temp2 is: " + temp2);
+
+        Toast.makeText(getApplicationContext(), "Selected conversion: " + temp2, Toast.LENGTH_SHORT).show();
+
+        finish();
     }
 
     private void InitView(){

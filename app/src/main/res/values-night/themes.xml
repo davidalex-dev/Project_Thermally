@@ -12,19 +12,4 @@
         <item name="colorPrimary">@color/white</item>
     </style>
 
-    <style name="Red" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#FF0000</item>
-        <item name="colorSecondary">#4E4B4B</item>
-    </style>
-
-    <style name="Orange" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#FF5722</item>
-        <item name="colorSecondary">#4E4B4B</item>
-    </style>
-
-    <style name="Blue" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#0066FF</item>
-        <item name="colorSecondary">#4E4B4B</item>
-    </style>
-
 </resources>
