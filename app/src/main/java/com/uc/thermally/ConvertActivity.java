@@ -12,7 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.uc.thermally.model.History;
+
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 //import androidx.appcompat.app.AppCompatActivity;
 
 public class ConvertActivity extends AppCompatActivity {
@@ -27,6 +30,7 @@ public class ConvertActivity extends AppCompatActivity {
     public static String tempConv = null;
     private Intent intent;
     private Boolean converted = false;
+    private ArrayList<History> dataTemp;
 
     private static final String TAG = "ConvertActivity";
 
@@ -256,8 +260,6 @@ public class ConvertActivity extends AppCompatActivity {
 
         converted = true;
 
-        //put in history
-
         Log.d(TAG, "ConvertType: " + convertType);
         Log.d(TAG, "temp2 is: " + temp2);
 
@@ -308,6 +310,10 @@ public class ConvertActivity extends AppCompatActivity {
         text_Calc.setText(textChange);
         text_Selected.setText("Converted temperature is: " + tempDouble + "°" + tempString);
 
+        //put in history
+        dataTemp.add(new History(tempDouble, tempString, textChange));
+        Log.d(TAG, "add to history.");
+
     }
 
     private void InitView(){
@@ -330,6 +336,7 @@ public class ConvertActivity extends AppCompatActivity {
         text_Calc = findViewById(R.id.text_Calc);
         button_history = findViewById(R.id.button_history);
         text_Selected = findViewById(R.id.text_Selected);
+        dataTemp = new ArrayList<History>();
     }
 
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/SplashBG"
     tools:context=".HotActivity">
 
     <androidx.cardview.widget.CardView
@@ -18,7 +19,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/red">
+            android:background="@color/red"
+            android:theme="@style/SplashBG">
 
             <ImageButton
                 android:id="@+id/hot_button_Back"
@@ -53,8 +55,10 @@
                 android:background="@android:color/transparent"
                 android:text="@string/temp_hot"
                 android:textAllCaps="true"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView18"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -68,11 +72,11 @@
                 android:layout_marginBottom="116dp"
                 android:background="@android:color/transparent"
                 android:text="@string/hot_info1"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                app:layout_constraintStart_toEndOf="@+id/imageView7" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -84,6 +88,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/hot_info2"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +102,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/hot_info4"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,6 +116,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/hot_info3"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

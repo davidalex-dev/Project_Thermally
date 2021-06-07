@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/SplashBG"
     tools:context=".WarmActivity">
 
     <androidx.cardview.widget.CardView
@@ -52,6 +53,7 @@
                 android:background="@android:color/transparent"
                 android:text="@string/temp_warm"
                 android:textAllCaps="true"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +69,7 @@
                 android:layout_marginBottom="142dp"
                 android:background="@android:color/transparent"
                 android:text="@string/warm_info1"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -84,6 +87,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/warm_info2"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +101,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/warm_info3"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,6 +115,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:text="@string/warm_info4"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
