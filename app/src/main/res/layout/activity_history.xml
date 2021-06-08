@@ -27,4 +27,18 @@
         app:navigationIcon="@drawable/abc_vector_test"
         app:title="@string/convert_history"
         app:titleTextColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/history_noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_noData"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.uc.thermally.model.History;
 
@@ -17,25 +19,29 @@ public class HistoryActivity extends AppCompatActivity {
     private static final String TAG = "ConvertInfoActivity";
     public static ArrayList<History> listTemp = new ArrayList<>();
     private HistoryRVAdapter adapter = new HistoryRVAdapter(listTemp);
+    private TextView history_noData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        ConvertActivity ca = new ConvertActivity();
-        listTemp = ca.getList();
-
         initView();
         setupRecyclerView();
         //addTemp(); //for debug purposes only
 
+        if(listTemp.size() < 1){
+            history_noData.setVisibility(View.VISIBLE);
+        }else{
+            history_noData.setVisibility(View.INVISIBLE);
+        }
 
-
-        Log.d(TAG, "listTemp size is (from HistoryActivity): " + String.valueOf(listTemp.size()));
     }
 
     private void initView(){
+        ConvertActivity ca = new ConvertActivity();
+        listTemp = ca.getList();
         history_recyclerView = findViewById(R.id.history_recyclerView);
+        history_noData = findViewById(R.id.history_noData);
     }
 
     private void setupRecyclerView(){

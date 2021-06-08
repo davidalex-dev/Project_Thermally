@@ -66,4 +66,6 @@
     <string name="cold_info2">This temperature is perfect for bedroom, underground rooms, bunker or food storages.</string>
     <string name="cold_info3">Low temperatures may caused by dropping environment temperature or even winter’ disaster, in other case, low temperatures can also caused by extended usage of cooling machine or fast decreasing pressure points.</string>
     <string name="cold_info4">Low Temperatures can be used to keep food for a long usage or planting fungus in underground. It can also used as relaxing bedroom due to it’s cold behaviour that made someone much relaxed in their bed.</string>
+
+    <string name="history_noData">There is no data yet.</string>
 </resources>
