@@ -1,14 +1,11 @@
 package com.uc.thermally;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.uc.thermally.model.History;
 
@@ -17,34 +14,27 @@ import java.util.ArrayList;
 public class HistoryActivity extends AppCompatActivity {
 
     private RecyclerView history_recyclerView;
-    private HistoryRVAdapter adapter;
     private static final String TAG = "ConvertInfoActivity";
-    private ArrayList<History> dataTemp;
+    public static ArrayList<History> listTemp = new ArrayList<>();
+    private HistoryRVAdapter adapter = new HistoryRVAdapter(listTemp);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        ConvertActivity ca = new ConvertActivity();
+        listTemp = ca.getList();
+
         initView();
         setupRecyclerView();
         //addTemp(); //for debug purposes only
-        detect();
-    }
 
-    private void detect(){
-        if(dataTemp.isEmpty()){
-            //text_noData.setVisibility(View.VISIBLE);
-            Log.d(TAG, "No data detected");
-        }else{
-            Log.d(TAG, "Data is detected!");
-            //dataHistory.add(newHistory);
-            adapter.notifyDataSetChanged();
-//              text_noData.setVisibility(View.INVISIBLE);
-        }
+
+
+        Log.d(TAG, "listTemp size is (from HistoryActivity): " + String.valueOf(listTemp.size()));
     }
 
     private void initView(){
-        dataTemp = new ArrayList<History>();
         history_recyclerView = findViewById(R.id.history_recyclerView);
     }
 
@@ -52,10 +42,14 @@ public class HistoryActivity extends AppCompatActivity {
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getBaseContext());
         history_recyclerView.setLayoutManager(manager);
         history_recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
     private void addTemp(){
-        //adapter.notifyDataSetChanged();
+        listTemp.add(new History(69.4, "C", "Hot"));
+        listTemp.add(new History(42.0, "C", "Hot"));
+        adapter.notifyDataSetChanged();
     }
+
 
 }

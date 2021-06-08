@@ -119,7 +119,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:theme="@style/SplashBG">
 
             <TextView
                 android:id="@+id/textView32"
@@ -129,6 +130,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="106dp"
                 android:text="@string/option_info"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,6 +144,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/option_fahrenheit"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView35" />
@@ -153,6 +156,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/option_celcius"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView33" />
@@ -164,6 +168,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="60dp"
                 android:text="@string/option_reamur"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

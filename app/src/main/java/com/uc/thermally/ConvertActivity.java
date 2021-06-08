@@ -30,7 +30,8 @@ public class ConvertActivity extends AppCompatActivity {
     public static String tempConv = null;
     private Intent intent;
     private Boolean converted = false;
-    private ArrayList<History> dataTemp;
+    public static ArrayList<History> listTemp = new ArrayList<>(); //init to be put in initview soon
+    private HistoryRVAdapter adapter = new HistoryRVAdapter(listTemp);
 
     private static final String TAG = "ConvertActivity";
 
@@ -44,6 +45,10 @@ public class ConvertActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 intent = new Intent(getBaseContext(), HistoryActivity.class);
+                //History h = new History();
+                //Bundle b = new Bundle();
+                //b.putParcelableArrayList("data", listTemp);
+                //intent.putParcelableArrayListExtra();
                 startActivity(intent);
             }
         });
@@ -156,6 +161,7 @@ public class ConvertActivity extends AppCompatActivity {
                 converted = false;
                 text_Calc.setText("Enter a temperature number.");
                 text_Selected.setText("Conversion type not yet selected.");
+
             }
         });
 
@@ -194,9 +200,27 @@ public class ConvertActivity extends AppCompatActivity {
         info_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //if converted !=true
-                //kembali ke menu
-                //finish();
+                if(converted!=true){
+                    finish(); //back to menu
+                }else{
+                    //check the temps
+                    Log.d(TAG, "converted");
+                    Log.d(TAG, text_Calc.getText().toString());
+
+
+                    if(text_Calc.getText().toString().equals("Hot")){
+                        Log.d(TAG, "Hotter than hot!");
+                        intent = new Intent(getBaseContext(), HotActivity.class);
+                    }else if(text_Calc.getText().toString().equals("Warm")){
+                        Log.d(TAG, "Ooooh, warmy");
+                        intent = new Intent(getBaseContext(), WarmActivity.class);
+                    }else if(text_Calc.getText().toString().equals("Cold")){
+                        Log.d(TAG, "COOOOOOOOLLLLDDD");
+                        intent = new Intent(getBaseContext(), ColdActivity.class);
+                    }
+                    startActivity(intent);
+                }
+
                 //else
                     //if temp = hot
                     //intent hot
@@ -310,9 +334,21 @@ public class ConvertActivity extends AppCompatActivity {
         text_Calc.setText(textChange);
         text_Selected.setText("Converted temperature is: " + tempDouble + "°" + tempString);
 
-        //put in history
-        dataTemp.add(new History(tempDouble, tempString, textChange));
+//        //put in temphistory
+        listTemp.add(new History(tempDouble, tempString, textChange));
+        adapter.notifyDataSetChanged();
         Log.d(TAG, "add to history.");
+        Log.d(TAG, String.valueOf("listTemp size is (from convertactivity): " + listTemp.size()));
+
+        for(int i = 0; i < listTemp.size(); i++){
+            Log.d(TAG, "get condition for " + i + ": " + listTemp.get(i).getCondition());
+            Log.d(TAG, "get type for " + i + ": " + listTemp.get(i).getType());
+            Log.d(TAG, "get temp for " + i + ": " + listTemp.get(i).getTemp());
+        }
+
+//
+//        int listSize = dataTemp.size();
+
 
     }
 
@@ -336,7 +372,10 @@ public class ConvertActivity extends AppCompatActivity {
         text_Calc = findViewById(R.id.text_Calc);
         button_history = findViewById(R.id.button_history);
         text_Selected = findViewById(R.id.text_Selected);
-        dataTemp = new ArrayList<History>();
+    }
+
+    public static ArrayList<History> getList(){
+        return listTemp;
     }
 
 }
