@@ -7,6 +7,12 @@
         <item name="android:background">#C4C4C4</item>
     </style>
 
+    <style name="HistoryBG" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="android:background">#787878</item>
+    </style>
+
     <style name="SplashBG" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">#4E4B4B</item>
         <item name="colorPrimary">@color/white</item>

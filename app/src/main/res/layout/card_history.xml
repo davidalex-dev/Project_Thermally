@@ -71,8 +71,8 @@
 
             <TextView
                 android:id="@+id/history_Degrees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="205dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="164dp"
